@@ -54,7 +54,7 @@ if anchal != "Select":
 	elif areaIn == "Decimal":
 		decimal = st.number_input("Total Area in Decimal")
 
-	taxPercent = st.slider("@Rate",min_value=100, max_value=130, step=5)
+	taxPercent = st.slider("@Rate",min_value=100, max_value=130, value=110, step=10)
 
 	if st.button("Calculate"):
 		totalRate = ratePerDecimal * decimal
