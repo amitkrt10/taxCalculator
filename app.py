@@ -49,7 +49,7 @@ if anchal != "Select":
 	areaIn = st.radio("Area in",["Decimal","Katha"])
 	if areaIn == "Katha":
 		katha = st.number_input("Total Area in Katha")
-		decimal = float(katha) * 3.5
+		decimal = float(katha) * 3.125
 		st.write(f"{round(katha,2)} Katha = {round(decimal,2)} Decimal")
 	elif areaIn == "Decimal":
 		decimal = st.number_input("Total Area in Decimal")
@@ -65,4 +65,6 @@ if anchal != "Select":
 			rf = 1
 		totalRateRound = totalRate//1000 + rf
 		totalTax = int(math.ceil(totalRateRound*taxPercent))
+		govtTax = int(math.ceil(totalRateRound*80))
 		st.info(f"Total Tax = ₹ {totalTax}")
+		st.write(f"vkdf{govtTax}")
