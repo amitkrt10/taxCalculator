@@ -20,7 +20,7 @@ def read_gsheet(sheetId,sheetName):
 	data = pd.read_csv(urllib.request.urlopen(url))
 	return data
 
-st.markdown("<h1 style='text-align: center; color: green;'>Bihar Government Land Tax Calculator</h1>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: green;'>Bihar Government Land Tax Calculator</h3>", unsafe_allow_html=True)
 
 #options
 anchalDF = read_gsheet(st.secrets["sheetId"],"AnchalList")
